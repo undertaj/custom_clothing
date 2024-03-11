@@ -1,0 +1,341 @@
+body {
+  font-family: arial, helvetica;
+  font-size: 16px;
+  margin: 0;
+  background-color: #ffffff;
+}
+#avatar {
+  position: relative !important;
+  margin: 10px auto;
+  width: 360px;
+  height: 400px;
+}
+
+.downloadPNG {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+  
+.downloadPNG:hover {
+box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+.downloadPNG {
+    padding: 0 2.6rem;
+}
+}
+#avatar svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 360px;
+}
+.hair_back1 {
+  padding-left: 5px;
+}
+.menu {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.options select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.t-shirt-svg {
+  width: 300px;
+  height: 400px;
+}
+
+.collar,
+.pocket,
+.sleeve,
+.text {
+  display: none;
+}
+
+.selected .collar,
+.selected .pocket,
+.selected .sleeve,
+.selected .text {
+  display: block;
+}
+
+/* options css */
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #d6b8b8;
+}
+
+#select-field {
+  margin-left: 40px;
+}
+/* <--------------------> */
+
+/* Style the tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tablink {
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.tablink:hover {
+  background-color: #ddd;
+}
+#img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+.tablink.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px;
+}
+
+.tabcontent h2 {
+  margin-bottom: 10px;
+}
+
+.tabcontent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tabcontent ul li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.tabcontent ul li:hover {
+  text-decoration: underline;
+}
+/* <----------> */
+
+#footer {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 361px;
+  height: 99px;
+  border-top: 1px solid #707070;
+}
+#menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 99px;
+  background-color: #ffffff;
+  border-right: 1px solid #707070;
+  z-index: 200;
+  overflow: hidden;
+}
+#menu_lines div {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 7px;
+  background-color: #707070;
+  -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+  transition: all 0.35s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+}
+#menu.active #menu1 {
+  top: 22px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+  transition: all 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+}
+#menu.active #menu2 {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+  transition: opacity 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+}
+#menu.active #menu3 {
+  top: 22px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+  transition: all 0.5s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+}
+#options {
+  position: absolute;
+  top: 0;
+  left: 61px;
+  width: 299px;
+  height: 99px;
+}
+#options_title {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8px;
+}
+#options_div {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 299px;
+  height: 65px;
+  overflow-y: hidden;
+}
+.skins,
+.eyes,
+.eyebrows,
+.mouths,
+.hairstyles,
+.haircolors,
+.facialhairs,
+.clothes,
+.fabriccolors,
+.backgroundcolors,
+.glasses,
+.glassopacity,
+.tattoos,
+.accesories {
+  flex: 0 0 auto;
+  top: 0;
+  width: 53px;
+  height: 53px;
+  margin: 5px;
+  border: 1px solid #707070;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffdbb4;
+}
+.face_option {
+  flex: 0 0 auto;
+  top: 0;
+  width: 53px;
+  height: 53px;
+  margin: 5px;
+  border: 1px solid #707070;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffdbb4;
+}
+
+.eyes,
+.eyebrows,
+.mouths,
+.hairstyles,
+.facialhairs,
+.clothes,
+.glasses,
+.tattoos,
+.accesories {
+  background-image: url(https://i.imgur.com/q0DdlUI.png);
+}
+.glassopacity {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  height: 43px;
+  padding-top: 10px;
+  color: #707070;
+}
+#menu_list {
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  width: 250px;
+  height: auto;
+  text-align: center;
+}
+.btn {
+  padding: 8px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+#menu_list div {
+  width: 100%;
+  cursor: pointer;
+  padding: 7px 0 7px 0;
+  font-size: 19px;
+  font-weight: bold;
+  color: #707070;
+}
+
+#movableText {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+  cursor: move;
+}
+
+#controlPanel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+}
+
+#movableText:hover + #controlPanel {
+  display: block;
+}

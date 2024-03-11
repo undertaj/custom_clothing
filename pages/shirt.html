@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title >Customise Shirt</title>
+    
+    <h1>Customise Shirt</h1> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <script src="../js/avatar-generator.js"></script>
+
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab('sleeve1')">Sleeve</button>
+        <button class="tablink" onclick="openTab('placket1')">Placket</button>
+        <button class="tablink" onclick="openTab('collar1')">Collar</button>
+        
+    </div>
+    
+    <div id="sleeve1" class="tabcontent" style="display:block;">
+        <!-- Choices of sleeve -->
+        
+        <ul class="options-list">
+            <li class="option" data-sleeve="short"> 
+                <img src="../assets/SHIRT.png" alt="Shirt Image" height="100">  
+                <br> Short Sleeve
+            </li>
+            <li class="option" data-sleeve="long">
+                <img src="../assets/SHIRTlong_shirt.png" alt="Shirt Image" height="100">
+                <br> Long Sleeve
+            </li>
+        </ul>
+    </div>
+    
+    <div id="placket1" class="tabcontent" > 
+        <ul class="placket-options-list">
+            <li class="option" data-sleeve="plain_placket"> 
+                <img src="../assets/plain_placket.png" alt="Shirt Image" height="100">
+                <br> Plain Placket
+            </li>
+    
+            <li class="option" data-sleeve="box_placket">
+                <img src="../assets/box_placket.png" alt="Shirt Image" height="100">
+                <br> Box Placket
+            </li>
+        </ul>
+    </div>
+    
+    <div id="collar1" class="tabcontent">
+        <ul class="collar-options-list">
+            <li class="option" data-sleeve="regular_collar"> 
+                <img src="../assets/collar_classic.png" alt="Collar Image" height="50"><br>
+                Regular Classic
+            </li>
+    
+            <li class="option" data-sleeve="round_collar">
+                <img src="../assets/collar_round.png" alt="Collar Image" height="50">
+                <br> Club Collar
+            </li>
+        </ul>
+    </div>
+
+    <main style="text-align: center;">
+        
+        
+        
+    
+    
+
+    <ul id = "color-choice" style="margin-bottom: 30px;">
+        <label for="color">Choose part:</label>
+        <select id="select-field"  name="type" required>
+            
+        <option value="" disabled selected >Select</option>
+            <option value="shirt">Shirt</option>
+            <option value="collar2">Collar</option>
+            <option value="buttons">Buttons</option>
+            
+        </select>
+        <label for="color" style="margin-left: 20px; margin-right: 20px;">Choose a color :</label>
+        <input type="color" id="select-color" name="color">
+        
+        
+    </ul>
+
+
+    <!-- T-shirt avatar -->
+    <div id='avatar' style="border: 3px solid black; border-radius: 10px;">
+        <svg id = "avatar2" xmlns='http://www.w3.org/2000/svg'  width='360px' height='360px' viewBox='-38 0 360 360' E='xMidYMid meet' style="margin-top: 17px;">
+        
+        <svg id="sleeve" width="360" height="360" viewBox="0 -42 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <g id="s_short" style="display:none">
+                <svg id="shirt_short" width="360" height="360" viewBox="-16 -8 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M240.5 0.500122C236.5 0.500122 259.5 5.5 270.5 106C267.76 107.027 230 114 222.5 114C219.463 94.2589 222.313 76.0149 217.724 54.0001C217.724 44.0149 216.296 34.3094 217.724 25.5001C218.917 18.1408 220.936 12.7687 226.5 8.00012C230 5.00012 236 1.50012 240.5 0.500122Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                    <path d="M1 112.5C1 112.5 14.3387 17.8809 29.4546 2.00012H35.0018C37 3.50189 44.7181 11.3526 46.7125 13.0621C50.055 15.9271 55.0345 22.1152 55.7307 26.5245C55.9237 27.7467 57.5148 32.1643 58.3908 32.9152C60.6449 34.8473 60.2817 40.0882 61.2455 42.8417C63.0509 48 62.7377 53.5348 62.7377 58.9642C55.7307 96.5001 47.324 118.042 47 119.5C42.7327 117.912 1 112.5 1 112.5Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                </svg>
+            </g>
+            
+            <g id="s_long" >      
+            <svg id = "shirt_long" width="360" height="360" viewBox="1 -2 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" >
+                <path d="M48.3449 5.89746C39.5851 6.84501 29.6411 43.3661 29.6411 52.657C28.0851 60.845 27.0851 66.345 25.5851 74.345C24.0826 78.6855 25.2151 82.2698 23.5851 86.345C23.0094 87.7842 22.0913 95.5208 21.8911 97.1219C21.4861 100.362 19.2936 104.021 18.5851 107.21C17.7055 111.168 17.1719 114.363 17.1719 118.467C17.1719 121.891 14.973 124.842 14.0978 127.905C13.5757 129.733 12.4959 130.087 12.4959 132.148C12.4959 133.837 12.4959 135.525 12.4959 137.214C12.4959 140.65 13.147 148.401 11.0851 150.463C6.84075 154.707 7.81994 158.14 7.81994 164.101C7.81994 167.581 8.74257 172.002 6.26129 174.345C4.61604 179.345 7.43028 180.563 6.26129 183.845C3.08742 187.654 5.89624 191.589 4.61604 195.75C3.88596 198.123 3.9666 198.887 3.9666 201.345C3.9666 203.57 3.37042 206.003 3.9666 208.089C5.84882 214.677 4.6161 223.725 4.6161 230.845C4.6161 234.365 0.350138 236.773 1.08513 239.345C1.39695 240.436 2.28026 242.219 2.9708 242.986C3.79579 243.903 2.92406 246.694 3.18728 247.878C3.96309 251.369 3.92331 256.333 3.92331 259.845C3.92331 262.955 3.58521 268.03 3.58521 271.845C3.58521 275.66 4.70263 278.996 4.70263 281.345C4.70263 289.528 4.70263 294.662 4.70263 302.845C8.58521 300.845 14.0852 293.359 35.5852 296.845C38.3977 297.301 40.0852 297.345 41.9371 297.845C41.331 293.845 41.5852 289.845 41.0852 285.845C40.5852 283.845 40.0852 279.749 40.0852 277.345C40.0852 274.011 39.9574 276.724 39.7723 273.206C39.5042 268.112 35.9779 269.31 31.9791 269.31C28.5442 269.31 25.1094 269.31 21.6746 269.31C18.1153 269.31 15.5852 269.845 11.8898 270.845C10.2957 270.934 5.9278 274.392 4.70263 275.345C6.97741 273.639 9.80803 271.207 13.0852 270.345C18.0852 269.03 22.7354 268.845 28.0852 268.845C29.924 268.845 36.5852 268.845 39.1662 269.31C39.1662 263.81 38.5852 264.738 38.5852 262.345C39.1662 260.345 39.6523 260.944 40.5852 258.845C41.2651 257.315 41.331 255.925 41.331 254.113C41.331 252.231 41.8335 245.528 43.2793 244.371C44.7412 243.202 45.5852 236.786 45.5852 234.845C45.5852 231.22 45.5501 227.39 46.6131 223.936C47.5423 220.916 46.5082 218.111 47.9119 215.103C48.7639 213.278 49.0116 208.99 49.1242 206.964C49.353 202.846 49.0785 199.026 50.8561 195.274C54.4868 187.609 53.8002 180.025 53.8002 171.504C53.8002 167.332 57.3072 165.537 57.3072 161.845C57.3072 159.985 57.7087 159.268 57.0907 157.26C56.5657 155.554 56.4655 151.978 57.3072 150.463C60.814 144.15 59.5009 135.746 63.4985 129.464C64.3743 128.088 64.5332 125.922 65.3169 124.355C65.7821 123.425 66.2694 120.315 66.2694 119.289C66.2694 116.597 66.4681 109.16 68.1744 107.21C70.7186 104.302 71.1564 97.6739 71.768 94.0046C72.3761 90.3561 80.1487 81.6241 82 78.5C86.1496 71.4975 94.8479 60.3207 95 52.657C92.9104 49.4065 98 29 69 7.5C67.1526 6.44432 48.3449 7.73929 48.3449 5.89746Z" stroke="#211515" stroke-width="0.2" stroke-linecap="round"/>
+                <path d="M256.665 5.29967C243.585 -0.655056 235.535 -0.0593467 233.585 4.84491C229.15 7.80177 224.147 18.1255 223.085 22.8449C219.316 39.6002 232.617 59.8395 235.085 76.8449C236.484 86.4778 237.487 97.8726 238.554 107.478C238.791 109.605 237.499 114.746 238.941 116.476C240.207 117.995 239.219 124.831 239.585 126.845C240.5 131.875 241.373 134.83 241.373 139.993C241.373 144.016 242.356 146.709 242.585 150.845C242.759 153.976 244.154 158.682 244.154 162.004C244.154 166.532 245.181 170.785 245.505 175.326C246.585 178.345 247.495 186.747 248.286 192.279C248.845 196.194 248.543 199.787 250.255 203.4C251.085 210.845 251.585 214.916 251.585 220.345C252.066 224.294 253.585 223.466 253.585 234.845C255.085 246.345 254.892 238.525 256.585 251.345C257.518 258.404 257.585 270.345 257.585 274.345C257.085 286.345 256.085 300.596 256.085 301.345C257.585 300.845 259.585 298.345 267.585 297.345C273.085 296.657 280.085 297.345 284.085 297.845C288.085 298.345 291.585 299.345 294.085 302.845C294.585 294.345 294.585 291.845 295.085 283.845C295.585 280.845 296.085 274.345 295.085 266.845C272.085 263.345 259.085 269.345 257.551 269.345C281.085 261.845 295.085 268.87 295.085 265.845C295.085 261.401 296.585 252.751 296.585 248.345C296.585 239.845 293.085 242.345 294.585 231.845C293.948 228.896 293.505 214.764 293.505 211.742C293.505 207.672 292.81 203.651 292.81 199.539C292.81 191.472 293.085 184.345 292.085 176.345C292.085 171.672 291.42 166.213 291.42 161.541C291.42 155.469 290.03 149.66 290.03 143.623C290.03 140.149 289.085 136.845 288.485 132.501C288.485 130.345 287.692 127.367 287.585 125.345C287.441 122.596 285.859 120.002 285.859 117.248C285.859 114.203 284.469 111.679 284.469 108.559C284.469 102.17 283.079 96.6687 283.079 90.4483C283.079 89.0115 282.585 85.5949 282.085 82.8449C281.085 77.3449 281.085 76.8449 280.585 73.3449C280.496 71.8318 279.585 65.8449 279.085 62.8449C279.085 60.3883 276.64 51.3733 276.585 48.8449C275.085 41.3449 274.585 40.3449 273.585 35.3449C271.085 29.3449 271.085 28.8449 268.585 22.8449C267.335 19.8449 267.085 19.3449 265.585 17.3449C265.293 16.3423 260.585 8.34484 256.665 5.29967Z" stroke="#211515" stroke-width="0.2" stroke-linecap="round"/>
+            </svg>
+            </g>
+        </svg>  
+        
+        <svg id = "shirt" width="360" height="360" viewBox="-43 -1 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.45788 60.2595C5.37244 59.576 3 55.0441 1 52.544C2.85596 47.1889 61.7005 19.7565 63 19.5203C72 16.6631 74.8258 3.75164 77 1.04404C78 9.52033 95.6671 21.1632 104.5 25.0203C116.5 17.0202 125 15.0202 134.5 0.54404C134.884 -0.0406881 138 9.02026 142.5 15.0202C145.5 18.0202 197.554 38.3953 202.5 40.0441C216 49.0203 217.5 54.5203 217.5 57.5203C211 63.5203 207.5 74.5 204 83.5C200.5 92.5 196.49 106.869 195.5 113.5C193.893 119.548 191 135.741 191 142C190 152 187.826 169.905 187 178.5C184.879 200.556 184.5 218.5 184.5 241C185.398 251.332 184.72 268 185.5 277.5C185.952 283 187 299.5 188.5 307.5C188.525 308.921 192 349.5 192 351.5C185.5 353.5 175.5 357 168.5 357C154 358 138.05 359 135.5 359H103C97.1288 359 67.5 357.5 62.5 357C20 353.5 11 348.5 9.5 347.5C8 346.5 11.5 316 11.5 313.5C11.5 310.5 14.2 296.02 15 292.02C16 287.02 17.5 271.52 18.5 265.02C19.4884 258.596 20 252.52 21.5 240.02C22.64 230.52 24 223.52 25.8467 213.236C26.19 211.691 27.5 195.088 27.5 193.02C29.6802 179.313 29.5 167.621 29.5 163.52C29.5 159.954 28.5 151.587 28.5 148.02C28.5 144.173 28.7402 131.437 24 117.02C22.2526 113.089 16.6985 88.5441 14.542 83.1515C10.5 73.0441 6.5 61.5441 5.45788 60.2595Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+        </svg>
+    
+        <!-- Pocket -->
+        <!-- <div id = "movablePocket">
+            <svg id = "pocket" width="360" height="360" viewBox="-156 -85 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.26783 2.03774C16.7053 4.0378 36.2053 3.0378 44.7053 2.03776C45.2053 1.03764 48.7053 20.0377 45.2053 43.0377C26.4168 62.3855 5.20529 48.0377 3.57596 44.1899C0.705288 30.0377 2.63396 4.896 2.63396 2.51314" stroke="#211515" stroke-width="0.2" stroke-linecap="round"/>
+            </svg>
+        </div> -->
+    
+        <svg id="placket2" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id= "s_plain_placket" >
+                <svg  width="360" height="360" viewBox="-134 -27 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.9997 0.51709C16.0875 0.51709 7.49967 0.51709 8.54664 0.51709C8.54664 7.51709 8.54664 13.5171 8.54664 18.5171C8.54664 23.5171 8.54664 33.693 8.54664 39.0171C8.54664 50.0927 8.54688 55.5171 8.54688 67.0171C8.54688 101.017 9.25922 126.903 9.25922 155.916C9.25922 166.533 9.25922 179.517 9.25922 191.017C9.25922 198.517 9.25922 206.998 9.25922 213.517C9.25922 217.122 10.0001 255.017 10.0001 259.017C10.0001 270.517 10.0001 275.472 10.0001 289.517C10.0001 308.791 10.0001 313.226 10.0001 332.5" stroke="#211515" stroke-width="0.35" stroke-linecap="round"/>
+                    <path d="M1 8.01709C9 12.0171 17 14.0171 25.5 9.01709" stroke="#211515" stroke-width="0.35" stroke-linecap="round"/>
+                </svg>
+            </g>
+            
+            <g id = "s_box_placket" style="display:none">
+                <svg  width="360" height="360" viewBox="-134 -27 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.9997 0.51709C16.0875 0.51709 7.49967 0.51709 8.54664 0.51709C8.54664 7.51709 8.54664 13.5171 8.54664 18.5171C8.54664 23.5171 8.54664 33.693 8.54664 39.0171C8.54664 50.0927 8.54688 55.5171 8.54688 67.0171C8.54688 101.017 9.25922 126.903 9.25922 155.916C9.25922 166.533 9.25922 179.517 9.25922 191.017C9.25922 198.517 9.25922 206.998 9.25922 213.517C9.25922 217.122 10.0001 255.017 10.0001 259.017C10.0001 270.517 10.0001 275.472 10.0001 289.517C10.0001 308.791 10.0001 311.226 10.0001 330.5" stroke="#211515" stroke-width="0.35" stroke-linecap="round"/>
+                    <path d="M1 8.01709C9 12.0171 17 14.0171 25.5 9.01709" stroke="#211515" stroke-width="0.35" stroke-linecap="round"/>
+                    <path d="M26 8.51709C26 22.0171 26 318.637 26 331" stroke="#211515" stroke-width="0.35" stroke-linecap="round"/>
+                </svg>
+            </g>
+        </svg>
+
+        <svg id="buttons" width="360" height="360" viewBox="-145 -30 360 360" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.8212 6.41434C0.820801 5.41455 0.723898 2.58631 1.32105 1.91452C3.00093 -0.6053 7.32116 0.414537 7.32109 3.91442C6.82109 6.41442 3.82116 6.91455 2.8212 6.41434Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M5.642 113.312C3.6416 112.312 3.5447 109.484 4.14185 108.812C5.82173 106.292 10.142 107.312 10.1419 110.812C9.64189 113.312 6.64196 113.812 5.642 113.312Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M5.642 155.312C3.6416 154.312 3.5447 151.484 4.14185 150.812C5.82173 148.292 10.142 149.312 10.1419 152.812C9.64189 155.312 6.64196 155.812 5.642 155.312Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M5.8212 197.414C3.8208 196.415 3.7239 193.586 4.32105 192.915C6.00093 190.395 10.3212 191.415 10.3211 194.914C9.82109 197.414 6.82116 197.915 5.8212 197.414Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M5.8212 242.414C3.8208 241.415 3.7239 238.586 4.32105 237.915C6.00093 235.395 10.3212 236.415 10.3211 239.914C9.82109 242.414 6.82116 242.915 5.8212 242.414Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M5.642 71.3118C3.6416 70.312 3.5447 67.4838 4.14185 66.812C5.82173 64.2922 10.142 65.312 10.1419 68.8119C9.64189 71.3119 6.64196 71.812 5.642 71.3118Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+            <path d="M4.642 34.3118C2.6416 33.312 2.5447 30.4838 3.14185 29.812C4.82173 27.2922 9.14196 28.312 9.14189 31.8119C8.64189 34.3119 5.64196 34.812 4.642 34.3118Z" stroke="#D9D9D9" stroke-width="0.2" stroke-linecap="round"/>
+        </svg>
+            
+        <svg id="collar2" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id= "s_regular_collar" >
+                <svg id="collar_regular" width="360" height="360" viewBox="-110 2 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56.0002 16.517C62.0002 11.1839 67.0002 0.516933 67.0001 1.01698C73.4999 11.517 71.5002 10.517 76.0002 19.017C71.0002 30.517 60.3191 48.517 59.0002 48.517C57.7621 48.517 46.0002 30.0172 39.0002 26.5172C40.0002 26.0172 51.5002 20.517 56.0002 16.517Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                    <path d="M1.00024 21.5172C2.5666 19.5172 7.16539 6.51697 9.99997 3.01697C11.5002 15.5172 26.4126 22.7234 35.0002 27.0172C29.5005 31.0174 18.0002 44.5172 15.0003 50.017C9.99998 44.017 2.50024 33.5172 1.00024 21.5172Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                </svg>
+            </g>
+            <g id= "s_round_collar" style="display:none">
+                <svg id="collar_round" width="360" height="360" viewBox="-110 2 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M56.0002 16.517C62.0002 11.1839 67.0002 0.516933 67.0001 1.01698C73.4999 11.517 71.5002 10.517 76.0002 19.017C71.0002 30.517 65.5 38 59.5 40.5C58.2619 40.5 49 44.5 39.0002 26.5172C40.0002 26.0172 51.5002 20.517 56.0002 16.517Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                    <path d="M1.00024 21.5172C2.5666 19.5172 7.16539 6.51697 9.99997 3.01697C11.5002 15.5172 26.4126 22.7234 35.0002 27.0172C31.5 38 29.4679 40.0064 22 41.5C17 42.5 6 34 1.00024 21.5172Z" stroke="black" stroke-width="0.2" stroke-linecap="round"/>
+                </svg>
+            </g>
+        </svg>
+
+
+        
+            
+            
+    
+        
+        <div id="movableText" contenteditable="true" width="5px">Drag me!</div>
+
+        <div id="controlPanel">
+            <label>Draggable text:</label><br>
+            <label for="fontSelect">Font:</label>
+            <select id="fontSelect">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <!-- Add more font options as needed -->
+            </select>
+            <input type="color" id="colorPicker">
+        </div>
+
+        
+    </svg>
+    </div>
+    <button id="downloadPNG" class="downloadPNG" style="margin-top: 20px; margin-bottom: 25px; background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%); border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; flex-shrink: 0; font-family: 'Inter UI','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif; font-size: 16px; font-weight: 500; height: 4rem; padding: 0 1.6rem; text-align: center; text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px; transition: all .5s; user-select: none; -webkit-user-select: none; touch-action: manipulation;">
+        Download as PNG
+    </button>
+
+    <form action="../php/upload.php" method="post" enctype="multipart/form-data" style="padding-top: 50px; margin-bottom: 50px;">
+        Select image to upload:
+        <input type="file" name="file" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+        
+    </form>
+
+    
+
+    
+
+</main>
+    <script src="../js/avatar-generator.js"></script>
+    <script>
+        function downloadSVGAsPNG(e){
+            const canvas = document.createElement("canvas");
+            const svg = document.querySelector('#avatar2');
+            const base64doc = btoa(unescape(encodeURIComponent(svg.outerHTML)));
+            const w = parseInt(svg.getAttribute('width'));
+            const h = parseInt(svg.getAttribute('height'));
+            const img_to_download = document.createElement('img');
+            img_to_download.src = 'data:image/svg+xml;base64,' + base64doc;
+            console.log(w, h);
+            img_to_download.onload = function () {
+                console.log('img loaded');
+                canvas.setAttribute('width', w);
+                canvas.setAttribute('height', h);
+                const context = canvas.getContext("2d");
+                //context.clearRect(0, 0, w, h);
+                context.drawImage(img_to_download,0,0,w,h);
+                const dataURL = canvas.toDataURL('image/png');
+                if (window.navigator.msSaveBlob) {
+                window.navigator.msSaveBlob(canvas.msToBlob(), "download.png");
+                e.preventDefault();
+                } else {
+                const a = document.createElement('a');
+                const my_evt = new MouseEvent('click');
+                a.download = 'download.png';
+                a.href = dataURL;
+                a.dispatchEvent(my_evt);
+                }
+                //canvas.parentNode.removeChild(canvas);
+            }  
+        }
+        const downloadPNG = document.querySelector('#downloadPNG');
+        downloadPNG.addEventListener('click', downloadSVGAsPNG);        
+        document.getElementById('capture-button').addEventListener('click', function() {
+            const elementToCapture = document.getElementById('capture-div');
+
+            html2canvas(elementToCapture).then(function(canvas) {
+                const imageDataURL = canvas.toDataURL('image/png');
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = imageDataURL;
+                downloadLink.download = 'capture.png';
+                downloadLink.click();
+            });
+        });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script>
+        $(document).on('click', '.options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            $("#sleeve g").hide();
+            $("#sleeve #s_" + sleeveType).css("display",'block');
+        });
+        $(document).on('click', '.placket-options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            $("#placket2 g").hide();
+            $("#placket2 #s_" + sleeveType).css("display",'block');
+        });
+        $(document).on('click', '.collar-options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            $("#collar2 g").hide();
+            $("#collar2 #s_" + sleeveType).css("display",'block');
+            
+        });
+        $(document).ready(function() {
+            function updateAvatar(category, color) {
+                var selectedCategory = category;
+                var selectedColor = color;
+                if(selectedCategory == "shirt") {
+                    $('#shirt_short').css("fill", selectedColor);
+                    $('#shirt_long').css("fill", selectedColor);
+                    $('#pocket').css("fill", selectedColor);
+                    $("#" + selectedCategory).css("fill", selectedColor);
+                } else if(selectedCategory == "collar2"){
+                    $("#collar_regular").css("fill", selectedColor);
+                    $("#collar_round").css("fill", selectedColor);
+                }
+                else {
+                    $("#buttons").css("fill", selectedColor);
+                }
+                
+            }
+            
+   
+            $('#select-color').on('input', function() {
+                var category = $('#select-field').val();
+                var color = $(this).val();
+                updateAvatar(category, color);
+            });
+            //<---------- Movable text drag ---------->
+            const movableText = document.getElementById('movableText');
+
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            movableText.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDrag);
+
+            function startDrag(event) {
+            isDragging = true;
+            offsetX = event.clientX - movableText.getBoundingClientRect().left;
+            offsetY = event.clientY - movableText.getBoundingClientRect().top;
+            }
+
+            function drag(event) {
+            if (!isDragging) return;
+            const newX = event.clientX - offsetX;
+            const newY = event.clientY - offsetY;
+            
+            movableText.style.left = newX + 'px';
+            movableText.style.top = newY + 'px';
+            }
+
+            function stopDrag() {
+            isDragging = false;
+            }
+
+            //<---------- Movable pocket drag ---------->
+            // $('#pocket').draggable({
+            //     drag: function(event, ui) {
+            //     var pocket = $('#pocket');
+            //     var viewBox = pocket.attr('viewBox').split(' ');
+            //     var newX = parseFloat(viewBox[0]) - ui.position.left;
+            //     var newY = parseFloat(viewBox[1]) - ui.position.top;
+            //     var newViewBox = newX + ' ' + newY + ' ' + viewBox[2] + ' ' + viewBox[3];
+            //     pocket.attr('viewBox', newViewBox);
+            //     }
+            // });
+            
+
+            var controlPanelVisible = false;
+            var controlPanelHovered = false;
+            var hideTimeout;
+
+            function showControlPanel() {
+                clearTimeout(hideTimeout);
+                $('#controlPanel').css('display', 'block');
+                controlPanelVisible = true;
+            }
+
+            function hideControlPanel() {
+                hideTimeout = setTimeout(function() {
+                if (!controlPanelHovered) {
+                    $('#controlPanel').css('display', 'none');
+                    controlPanelVisible = false;
+                }
+                }, 2000); // Adjust the delay here (in milliseconds)
+            }
+
+            $('#controlPanel').on('mouseover', function() {
+                controlPanelHovered = true;
+            });
+
+            $('#controlPanel').on('mouseleave', function() {
+                controlPanelHovered = false;
+                hideControlPanel();
+            });
+
+            $('#movableText').on('mouseover', function() {
+                showControlPanel();
+            });
+
+            $('#movableText').on('mouseleave', function() {
+                hideControlPanel();
+            });
+
+            $('#movableText').on('mousemove', function() {
+                if (controlPanelVisible) {
+                showControlPanel();
+                }
+            });
+
+            $('#movableText').on('focus', function() {
+                showControlPanel();
+            });
+
+            $('#movableText').on('blur', function() {
+                hideControlPanel();
+            });
+
+            $('#fontSelect').on('change', function() {
+                $('#movableText').css('font-family', $(this).val());
+            });
+
+            $('#colorPicker').on('input', function() {
+                $('#movableText').css('color', $(this).val());
+            });
+
+            $('#container').on('mousemove', function(event) {
+                var mouseX = event.pageX;
+                var mouseY = event.pageY;
+                $('#controlPanel').css({ top: mouseY, left: mouseX + 30 }); // Adjust the offset as needed
+            });
+            // $('#movablePocket').draggable({
+            //     drag: function(event, ui) {
+            //     var pocket = $('#pocket');
+            //     var viewBox = pocket.attr('viewBox').split(' ');
+            //     var newX = parseFloat(viewBox[0]) - ui.position.left;
+            //     var newY = parseFloat(viewBox[1]) - ui.position.top;
+            //     var newViewBox = newX + ' ' + newY + ' ' + viewBox[2] + ' ' + viewBox[3];
+            //     pocket.attr('viewBox', newViewBox);
+            //     }
+            // });
+            
+            
+
+        });
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+        
+    </script>
+</body>
+</html>

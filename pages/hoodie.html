@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title >Customise Hoodie</title>
+    
+    <h1>Customise Hoodie</h1> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <script src="../js/avatar-generator.js"></script>
+
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab('sleeve1')">Sleeve</button>
+        <button class="tablink" onclick="openTab('hoodie')">Hoodie</button>
+        <button class="tablink" onclick="openTab('chain')">Chain</button>
+        <button class="tablink" onclick="openTab('pocketc')">Pocket</button>
+        
+    </div>
+    
+    <div id="sleeve1" class="tabcontent" style="display:block;">
+        <!-- Choices of sleeve -->
+        
+        <ul class="options-list">
+            <li class="option" data-sleeve="short"> 
+                <img src="../assets/hood_half.png" alt="Shirt Image" height="100">  
+                <br> Short Sleeve
+            </li>
+            <li class="option" data-sleeve="long">
+                <img src="../assets/hood_full.png" alt="Shirt Image" height="100">
+                <br> Long Sleeve
+            </li>
+        </ul>
+    </div>
+    
+    <div id="hoodie" class="tabcontent" > 
+        <ul class="hoodie-options-list">
+            <li class="option" data-sleeve="no_hoodie"> 
+                <img src="../assets/no_hoodie.png" alt="Shirt Image" height="100" >
+                <br> No Hoodie
+            </li>
+    
+            <li class="option" data-sleeve="yes_hoodie">
+                <img src="../assets/hood_attach.png" alt="Shirt Image" height="100">
+                <br> With Hoodie
+            </li>
+        </ul>
+    </div>
+    
+    <div id="chain" class="tabcontent">
+        <ul class="chain-options-list">
+            <li class="option" data-sleeve="no_chain"> 
+                
+                No chain
+            </li>
+    
+            <li class="option" data-sleeve="yes_chain">
+                 With chain
+            </li>
+        </ul>
+    </div>
+
+    <div id="pocketc" class="tabcontent">
+        <ul class="pocket-options-list">
+            <li class="option" data-sleeve="no_pocket"> 
+                
+                No pocket
+            </li>
+    
+            <li class="option" data-sleeve="basic_pocket">
+                 Basic Pocket
+            </li>
+        </ul>
+    </div>
+
+    <main style="text-align: center;">
+        
+        
+        
+    
+    
+
+    <ul id = "color-choice" style="margin-bottom: 30px;">
+        <label for="color">Choose part:</label>
+        <select id="select-field"  name="type" required>
+            
+        <option value="" disabled selected >Select</option>
+            <option value="hood_base">Hoodie</option>
+            <option value="hood">Cap</option>
+            <option value="threads">Threads</option>
+            
+        </select>
+        <label for="color" style="margin-left: 20px; margin-right: 20px;">Choose a color :</label>
+        <input type="color" id="select-color" name="color">
+        
+        
+    </ul>
+
+
+    <!-- T-shirt avatar -->
+    <div id='avatar' style="border: 3px solid black; border-radius: 10px;">
+        <svg id = "avatar2" xmlns='http://www.w3.org/2000/svg'  width='360px' height='400px' viewBox='-38 0 360 400' E='xMidYMid meet' style="margin-top: 17px;">
+        
+        <svg id="sleeve" width="360" height="400" viewBox="0 -67 360 400" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <g id="s_short" style="display:none">
+
+                <svg id="hood_short" width="299" height="187" viewBox="0 0 299 187" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.0005 6.99999C30.8756 3.93697 41.6414 -1.5 50.5005 0.999989C50.5005 2.84182 64.653 20.4443 66.5005 21.5C77.0005 31 76.1801 49.2495 78.2698 52.5C78.1176 60.1637 79.6484 67.9975 75.4988 75C77.3172 79 67.6083 79.3514 67.0002 83C67.0002 86.6923 59.0002 90.828 59.0002 95C59.0002 103.521 51.6309 134.335 48.0002 142C46.5544 143.157 49 180.618 49 182.5C35.0211 188 9.99995 187 1.5 180.5C1.87502 176.5 -0.499652 127.421 1.50006 122.355C2.50035 118.066 8.49989 60.5 12.0002 52.5C14.5002 35.5 24.0005 18.5 26.0982 15.5C27.0005 12.5 29.4783 8.82738 30.0005 6.99999Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+                    <path d="M269.112 6.99999C268.237 3.93697 257.471 -1.5 248.612 0.999989C248.612 2.84182 234.46 20.4443 232.612 21.5C222.112 31 222.933 49.2495 220.843 52.5C220.995 60.1637 219.464 67.9975 223.614 75C221.796 79 231.505 79.3514 232.113 83C232.113 86.6923 240.113 90.828 240.113 95C240.113 103.521 247.482 134.335 251.113 142C252.558 143.157 250.113 180.618 250.113 182.5C264.092 188 289.113 187 297.613 180.5C297.238 176.5 299.612 127.421 297.613 122.355C296.612 118.066 290.613 60.5 287.113 52.5C284.613 35.5 275.112 18.5 273.015 15.5C272.112 12.5 269.634 8.82738 269.112 6.99999Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+                </svg>
+                    
+            </g>
+            
+            <g id="s_long" >      
+
+                <svg id="hood_long" width="300" height="307" viewBox="0 0 300 307" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M54.0001 296C54.0001 298.655 51.8999 300.464 49.5001 302C37.0001 310 23.89 305.5 16.7029 300.845C16.7029 292.662 16.7029 287.528 16.7029 279.345C16.7029 276.996 15.5855 273.66 15.5855 269.845C15.5855 266.03 13.0001 255.223 13.0001 252.113C13.0001 248.601 0.000255167 204 1.50018 188C1.8752 184 -0.499703 127.421 1.50001 122.355C2.5003 118.066 8.49984 60.5 12.0001 52.5C14.5001 35.5 24.0004 18.5 26.0981 15.5C27.0004 12.5 29.4783 8.82739 30.0004 6.99999C30.8756 3.93697 41.6414 -1.5 50.5004 0.999989C50.5004 2.84182 64.653 20.4443 66.5004 21.5C77.0004 31 76.1801 49.2495 78.2697 52.5C78.1176 60.1637 79.6484 67.9975 75.4988 75C77.3172 79 67.6082 79.3514 67.0001 83C67.0001 86.6923 59.0001 90.828 59.0001 95C59.0001 103.521 51.6309 134.335 48.0001 142C46.5544 143.157 49.5001 180.618 49.5001 182.5C55.0208 201 51.1665 261.81 51.1665 267.31C48.5855 266.845 41.9243 266.845 40.0855 266.845C34.7357 266.845 30.0855 267.03 25.0855 268.345C21.8083 269.207 18.9777 271.639 16.7029 273.345C17.9281 272.392 22.296 268.934 23.8901 268.845C27.5855 267.845 30.1156 267.31 33.6749 267.31C37.1097 267.31 40.5445 267.31 43.9794 267.31C47.9782 267.31 51.5045 266.112 51.7726 271.206C51.9577 274.724 54.0001 292.666 54.0001 296ZM54.0001 296C53.3939 292 25.5001 292 18.0001 299.5C17.5001 297.5 39.0627 289.155 54.0001 296Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+                    <path d="M246.113 296C246.113 298.655 248.213 300.464 250.613 302C263.113 310 276.223 305.5 283.41 300.845C283.41 292.662 283.41 287.528 283.41 279.345C283.41 276.996 284.527 273.66 284.527 269.845C284.527 266.03 287.113 255.223 287.113 252.113C287.113 248.601 300.113 204 298.613 188C298.238 184 300.612 127.421 298.613 122.355C297.612 118.066 291.613 60.5 288.113 52.5C285.613 35.5 276.112 18.5 274.015 15.5C273.112 12.5 270.634 8.82739 270.112 6.99999C269.237 3.93697 258.471 -1.5 249.612 0.999989C249.612 2.84182 235.46 20.4443 233.612 21.5C223.112 31 223.933 49.2495 221.843 52.5C221.995 60.1637 220.464 67.9975 224.614 75C222.796 79 232.505 79.3514 233.113 83C233.113 86.6923 241.113 90.828 241.113 95C241.113 103.521 248.482 134.335 252.113 142C253.558 143.157 250.613 180.618 250.613 182.5C245.092 201 248.946 261.81 248.946 267.31C251.527 266.845 258.188 266.845 260.027 266.845C265.377 266.845 270.027 267.03 275.027 268.345C278.304 269.207 281.135 271.639 283.41 273.345C282.185 272.392 277.817 268.934 276.223 268.845C272.527 267.845 269.997 267.31 266.438 267.31C263.003 267.31 259.568 267.31 256.133 267.31C252.135 267.31 248.608 266.112 248.34 271.206C248.155 274.724 246.113 292.666 246.113 296ZM246.113 296C246.719 292 274.613 292 282.113 299.5C282.613 297.5 261.05 289.155 246.113 296Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+                </svg>
+                    
+            </g>
+        </svg>  
+
+
+        <svg id= "hood_base" width="360" height="400" viewBox="-29 -44 360 400" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.21 49C7.20996 44.5 3.30037 39.821 1 32.9199C2.03569 29.8128 3.46844 27.0233 6.21033 25.5C9.21033 22 12.7002 19.7219 18.2103 18C20.8831 17.1648 26.6693 14.0676 31.2103 13.5C35.7514 12.9324 38.193 11.5058 42.7103 10C54.0052 6.23504 56 5 61.5 2C65 6.5 74.9615 7.95769 79.5 10C82.6935 11.4371 94.0642 12.8384 102.71 15.3486C105.889 16.2715 110.621 16.3182 113.71 16.4999C122.21 16.9999 122.862 16.5646 125.71 16.4999C131.699 16.3638 136.378 16.515 142.21 15.3486C148.014 14.1878 152.495 14.1053 158.21 12.4999C163.305 11.0689 165.545 11.668 170.21 8.4999C174.441 5.62705 178.21 7 183.71 1C184.768 3.70261 200.075 8.8705 202.71 10C205.569 11.2251 210.21 12.5 215.21 13.5C223.21 14.5 230.71 20 236.21 25C238.16 25.2499 242.396 31.6103 242.396 33C240 34.5 235 35.7928 235 38C229.5 43 229.774 46.1483 226 51C223.62 54.0595 220 71.9521 220 76C220 78.3463 218 88.5 218 96C218 99.5 216.948 104.419 216.876 105.715C216.587 110.909 213.724 115.895 213.529 120.962C213.328 126.182 213.529 131.451 213.529 136.674C213.529 165.403 213.037 194.235 212.692 222.857C212.516 237.449 211.475 249.885 214.5 264C215.679 269.5 215.162 272.605 211.5 277C209.895 278.926 208.627 286.029 210 288.5C214.296 296.233 210.414 303.134 212.274 311.5C213.236 315.831 214.5 322.44 214.5 327C214.5 328.824 214.794 336.652 212.274 336.652H205.998C175.436 336.652 149.055 339 118.5 339C110.735 339 100.608 338.105 93 339C83.7168 340.092 77.9107 337.983 68.5 339C60.4404 339.871 40 337.5 30.0995 333.343C30.0995 322.421 36.21 301 30.21 294C29.71 288.5 33.5 290 33 286C34.5 275.5 33.274 259.254 32.6097 257.999C31.8769 256.615 31.5 241.5 31.5 238.5C31 233 32.9727 216.593 34.2831 214.118C34.2831 207.931 34.4691 188.5 33.214 168.888C34.2686 164.881 33.214 131.5 31.21 120C30.0303 117.198 27.7468 75.9927 27.5893 73C27.3876 69.1666 22.2518 62.8458 19.408 60.16C16.4107 57.3292 15.21 53.5 11.21 49Z" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M33 304C37.0343 304.224 41.5411 306.068 45.5278 306.068C50.9357 306.068 56.2158 306.394 61.6411 306.394C67.898 306.394 73.8426 308.345 80.1028 308.345C84.5105 308.345 88.9182 308.345 93.3258 308.345C99.0582 308.345 104.791 308.345 110.523 308.345C114.55 308.345 118.447 307.442 122.445 307.369C125.814 307.308 129.191 307.369 132.561 307.369C138.074 307.369 143.385 308.132 148.837 308.652C155.136 309.251 161.085 308.995 167.353 308.995C170.998 308.995 174.321 308.579 177.83 307.947C178.676 307.795 179.361 307.433 180.359 307.297C181.417 307.153 183.297 307.003 184.261 306.574C185.909 305.842 188.217 305.5 190 305.5C191.463 305.5 193.037 305.5 194.5 305.5C196.327 305.5 197.318 305.418 199.092 305.418C202.246 305.418 205.045 304.768 208.178 304.768C209.104 304.768 210.709 305.084 211.43 304.443C211.961 303.971 212.493 304.202 211.683 303.539C211.451 303.35 210.43 302.834 210.129 302.817C207.815 302.688 205.457 302.817 203.138 302.817C198.857 302.817 194.576 302.817 190.295 302.817C188.168 302.817 186.5 303 184.117 303.539C181.949 304.515 179.216 304.654 176.963 305.28C174.086 306.079 173.026 306.297 170 306.297C166.646 306.297 161.979 306.605 158.682 306.719C154.358 306.868 150.002 306.617 145.748 306.394C144.265 306.315 142.857 306.068 141.305 306.068C139.424 306.068 137.883 305.418 136.012 305.418C134.616 305.418 133.255 304.768 131.767 304.768C130.147 304.768 128.527 304.768 126.907 304.768C123.517 304.768 120.127 304.768 116.737 304.768C114.75 304.768 113.032 304.994 111.101 305.49C109.711 305.848 108.01 305.782 106.73 306.321C105.105 307.005 102.901 306.389 101.202 306.791C98.7707 307.367 96.5371 307.369 94.0484 307.369C87.9034 307.369 81.9994 306.394 75.8396 306.394C74.714 306.394 73.6904 306.114 72.5158 306.068C71.8988 306.045 71.1938 305.738 70.6371 305.49C70.0811 305.243 69.3887 305.594 68.8307 305.346C66.6357 304.37 63.8499 304.768 61.3882 304.768C59.1061 304.768 56.824 304.768 54.5419 304.768C52.6383 304.768 48.9478 305.461 47.2258 304.696C46.2488 304.261 45.0436 304.443 43.9743 304.443C42.8224 304.443 41.9645 304.117 40.8853 304.117C38.4461 304.117 35.562 303.5 33 303.5" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+        </svg>
+            
+    
+        <!-- Pocket -->
+        <!-- <div id = "movablePocket">
+            <svg id = "pocket" width="360" height="360" viewBox="-156 -85 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.26783 2.03774C16.7053 4.0378 36.2053 3.0378 44.7053 2.03776C45.2053 1.03764 48.7053 20.0377 45.2053 43.0377C26.4168 62.3855 5.20529 48.0377 3.57596 44.1899C0.705288 30.0377 2.63396 4.896 2.63396 2.51314" stroke="#211515" stroke-width="0.2" stroke-linecap="round"/>
+            </svg>
+        </div> -->
+
+        
+            
+        
+
+        
+            
+
+        <svg id="hood" width="360" height="360" viewBox="-79 0 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M58 59.5L68 60.5C73.5 61.05 79.5 60 84 59.5C88.5 59.5 93 58.5 95 58C99 58 100.861 58 103.5 57C104.462 57 106.673 56.0612 107.5 56C108.391 55.934 112.612 54.6452 113.5 54.5C115.997 54.0914 116.61 53.9351 119 53C120.302 52.4906 122.5 51 123.5 50.5C126 50 125.658 49.5509 128 49C130.5 48 131 47.5 132 46.5C134.122 44.3782 134.764 43.9769 136.572 42.8472L136.687 42.7753C137.682 42.1536 139.049 41.687 139.638 40.5099C140.324 39.1368 140.952 38.5373 140.952 36.9859C140.952 35.9624 140.99 34.9318 140.952 33.9094C140.911 32.8033 139.904 30.615 139.19 29.8261C138.241 28.7769 137.793 27.0611 137.302 25.7847C136.899 24.7367 136.57 23.3192 136.408 22.2607C136.211 20.9861 135.663 19.8211 135.289 18.6248C134.832 17.1631 134.992 15.6668 134.548 14.2059C134.11 12.7692 133.639 11.4242 132.953 10.0526C132.381 8.90774 131.697 8.12193 130.828 7.33972C130.437 6.98811 128.754 7.08197 128.199 6.97614C126.599 6.67139 124.959 6.78036 123.332 6.78036C121.3 6.78036 117.156 5.00008 115.117 5.00008C107.472 5.00008 109.245 3.50008 101.617 3.50008C99.1467 3.50008 94.0877 3.00006 91.6172 3.00006C88.8249 3.00006 85.8788 2.17264 83.1172 2.00004C78.0923 1.68598 76.1606 1 71.1172 1C69.0571 1 62.665 1.54498 60.6172 2.00004C58.3407 2.50593 54.9555 2.00006 52.6172 2.00006C50.9388 2.00006 47.2495 2.68749 45.6172 3.00006C43.0405 3.49346 41.681 3.50008 39.1172 3.50008C37.0556 3.50008 35.1642 5.00008 33.1172 5.00008C31.9865 5.00008 30.6172 5.00008 28.6172 5.32601C27.1172 5.27011 27.1172 5.32605 24.6172 5.32604L20.6172 5.32602C18.1172 5.77351 18.6172 5.32602 16.1172 6.02522C14.1172 7.50002 14.1313 6.45523 13.6416 7.78721C13.2044 8.97626 13.0108 10.6996 12.1313 11.6468C11.4746 12.354 10.1051 12.7972 10.0617 13.8843C10.0231 14.8471 9.55824 15.8383 9.55824 16.9048V20.1211C9.55824 21.2917 8.9431 22.456 8.55138 23.5333C7.80405 25.5884 6.61487 27.3205 5.67067 29.2947C4.90542 30.8947 4.24535 32.7737 3.65697 34.4548C3.11783 35.9952 2.38891 37.6533 2.06279 39.2513C1.73847 40.8405 1 42.1414 1 43.8381C1 44.9267 1.19908 48.0613 2.76199 48.0613C3.92546 48.0613 4.84749 47.0544 6.03426 47.0544C8.27615 47.0544 10.6622 46.7757 12.8305 46.1734C13.5 47.5 16.5 49.3344 17.5 49.3758C20.5 49.5 23.1815 51.4055 25.5 52C27.5082 52.5149 29.5021 53.5005 31.5 54C33.2194 54.4299 36.3487 54.8945 38 55.5C39.8404 56.1748 41.5265 56.2511 43.5 56.5C45.9305 56.8066 49.5 58 51.5 58.5C54 59 56.3504 59.5 58 59.5Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M54.5668 29.1122C46.4474 28.8584 39.8571 22.3371 32.0762 20.6081C28.8983 19.9018 25.9981 17.8928 23.1405 16.4639C21.7388 15.7631 17.4855 13.3562 17.2696 11.6291C17.1478 10.6545 15.7034 9.92296 17.0969 8.90952C18.5261 7.87012 19.8301 7.96469 21.4569 7.4418C24.2163 6.55483 27.0681 6.08435 29.961 5.77983C33.5184 5.40537 33.1172 5.50009 34.1172 5.50009" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M26.9995 18.584C28.4005 17.3231 31.212 17.1239 32.9751 17.1239C34.9073 17.1239 37.1179 16.8528 38.9777 16.3398C39.9487 16.0719 40.8989 16.1905 41.8979 16.1505C42.6559 16.1202 43.3762 15.6638 44.1557 15.6638C46.1836 15.6638 48.2115 15.6638 50.2394 15.6638C54.1425 15.6638 57.9968 16.1505 61.9337 16.1505C66.7105 16.1505 71.4874 16.1505 76.2643 16.1505C84.234 16.1505 92.1407 16.3939 100.126 16.3939C101.728 16.3939 103.238 16.1505 104.871 16.1505C106.097 16.1505 107.323 16.1505 108.549 16.1505C109.496 16.1505 113.293 17 114.119 17C115.683 17 117.649 17.8369 119.117 18C120.249 18.1258 116.31 19.5578 117.282 20.0441" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M104.117 3.5C107.34 3.94758 114.117 6 117.617 7C121.481 7.13325 125.578 7.98109 129.161 9.77282C132.06 11.2225 124.74 14.121 123.916 14.5645C119.887 16.734 117.081 20.854 113.016 22.7017C109.228 24.4237 105.093 27.9176 102.742 31.4432" stroke="black" stroke-width="0.3" stroke-linecap="round"/>            
+            </svg>
+                
+
+        <svg id="chain2" width="360" height="400" viewBox="-150 -48 360 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.82359 11.5001C4.1343 13.3643 3.82332 15.0881 3.82332 17C3.82332 22 3.82332 26.8441 3.82332 31.4697C3.82332 43.3274 3.2618 55.1278 2.97641 66.9715C2.67071 79.658 2.58729 92.32 2.58729 105.014C2.58729 120.218 1.42677 135.381 1.35123 150.564C1.21791 177.361 1 204.216 1 231C1 233.625 1 236.375 1 239C1 240.444 1 246.502 1 245C1 242.878 2.03936 336.586 2 334.5C2.5 335 3.99957 335 4.49957 334.5C4.49957 332.884 2.99957 227.5 2.99957 226C2.99957 223.5 2.99957 206.373 2.99957 203.5C2.99957 194.258 2.99957 184.772 2.99957 175.5C2.99957 168.573 2.99957 160.382 2.99957 153.5C2.99957 144.539 3.49957 135.405 3.49957 126.5C3.49957 119.601 3.99957 111.909 3.99957 105.014C3.99957 97.385 4.49957 84.5803 4.49957 77C4.49957 73.7853 4.79457 63.6775 4.99957 60.5C4.99957 56.5 5.49957 52.451 5.49957 49.5C5.49957 43.3809 5.49957 36.1192 5.49957 30C5.49957 19.8442 5.68353 25.6177 5.49957 15.5C5.47558 14.1801 8 5.00006 7 3.50006C7.5 1.50006 6.5 1.50003 5.5 1C5 0.749968 3.04698 0.658157 2.5 1.00002C0.996152 1.93992 1.31974 1.68772 1 3.3155C1.5 7.00006 0.499965 7.50006 3.82359 11.5001Z" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+        </svg>      
+
+        <svg id="threads" width="360" height="400" viewBox="-127 -27 360 400" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.94271 1C7.12951 1 7.69273 1.2494 7.88793 3.5918C7.35156 4.1991 6.5 4.5 5 5C4.5 5.5 4.5 5 4 6C4 6.35134 3.97937 7.14935 4 7.5C4.02119 7.86016 4.45536 8.1827 4.5 8.53979C4.58823 9.24561 7.09222 10.1646 7.70468 10.1891C9.04699 10.2428 8.34579 10.5439 8.13664 11.485C7.94906 12.3291 7.4439 12.0741 6.59203 12.0741C4.49548 12.0741 2.95906 11.1583 1.76186 9.48226C0.706963 8.00541 1.055 5.94584 1.055 4.18085C1.055 3.52924 2.05623 2.1818 2.52107 1.75921C3.17151 1.1679 4.10832 1 4.94271 1Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M8.51314 10.1991C4.51318 10.1991 1.30368 5.30415 7.37112 4.53427C10.0127 4.19908 10.9308 4.63897 12.0131 4.6991C14.4789 4.83608 16.5131 5.24113 19.1001 7.36169C25.9854 15.6991 24.5131 18.6991 26.0131 25.1991C27.5131 31.6991 31.0131 50.7427 31.0131 51.6991C31.0131 52.8072 29.8369 55.1991 28.0536 51.1867C27.5079 49.9588 27.2415 48.1473 26.9802 46.8147C26.6245 45.0006 25.89 43.0617 25.7498 41.2384C25.7216 40.8717 25.5521 40.3894 25.4618 40.0079C25.0904 38.4397 25.0975 36.7425 24.624 35.217C23.7938 32.5418 23.6501 29.6106 22.8045 26.9049C22.3409 25.4212 21.9629 23.6427 21.7574 22.1009C21.5258 20.3645 20.7974 18.7325 20.5531 17.022C20.3395 15.5271 18.0131 11.1991 16.0131 10.6603C11.5131 8.6991 9.60158 10.441 8.51314 10.1991Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M54.4223 1.94244C52.3818 1.94244 51.9763 2.22999 51.0059 4.06301C52.2955 3.63313 53.362 3.6991 54.4223 4.06301C55.6799 4.06301 55.8684 6.26887 55.3516 7.1991C55.0377 7.76413 54.9281 8.43236 54.0689 8.53976C53.6878 8.58739 52.0557 8.84193 51.8516 9.1991C51.6826 9.49487 51.7381 9.05143 51.7127 9.48223C51.6944 9.79391 51.8516 9.8868 51.8516 10.1991C51.8516 10.9546 52.7825 10.8959 53.362 10.8959C54.3735 10.8959 55.503 11.0596 56.412 10.5294C56.8921 10.2494 58.0052 9.59945 58.0744 9.01099C58.272 7.33167 59.1416 5.72118 57.9435 4.18082C57.0857 3.07795 55.9453 1.94244 54.4223 1.94244Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+            <path d="M43.2164 8.37618C45.8764 7.19397 48.2168 5.37622 50.8997 4.71139C54.7168 1.87624 59.2168 8.37622 51.7168 9.18814C50.9516 9.18814 47.8473 10.4263 47.1298 10.7851C45.8397 11.4302 43.7218 12.1702 42.7168 13.3762C41.3595 15.0049 40.2763 17.4919 39.2164 19.3762C38.5267 20.6024 38.3664 21.636 37.7168 22.8762C37.123 24.0098 36.6071 25.3214 36.0557 26.493C34.3868 30.0394 33.2747 33.8778 31.1078 37.2267C28.9392 40.5781 27.6595 44.5098 26.042 48.1044C24.5055 51.5188 23.4206 55.1686 22.1019 58.668C19.1046 61.8762 17.9446 58.0886 19.1043 55.6966C20.7475 52.3076 22.2062 48.8441 23.7164 45.3762C24.9659 42.507 26.5098 39.2536 27.7164 36.3762C28.0679 35.538 30.9039 28.8762 32.2164 25.8762C33.2293 23.5612 37.5804 13.8567 39.2164 11.8762C40.3106 10.5085 41.5471 9.1181 43.2164 8.37618Z" stroke="#211515" stroke-width="0.3" stroke-linecap="round"/>
+        </svg>
+         
+
+        <svg id="hoodie_pocket" width="360" height="400" viewBox="-62 -237 360 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.9855 61.8078C10.9482 65.8451 5.59381 72.8878 0.5 75.5V80.5V86.5C0.5 87.7242 4.94232 84.049 5.37588 83.2903C5.97357 82.2444 9.08238 79.2428 10 78.5C12.1679 76.745 12.8591 75.7619 14.9855 74C17.0575 72.2832 18.4286 70.1871 20.1799 68.1338C21.9966 66.0039 23.6302 64.2429 25 61.8078C27.0836 58.1036 28.5359 54.1261 30 50C31.3187 46.2837 32.6283 41.7036 34 38C35.6289 33.602 36.7064 29.0275 38 24.5C39.4219 19.5234 40.772 14.774 40.772 9.64115C40.772 8.06895 40.8845 6.63582 42.6271 6.63582C44.7623 6.63582 55.4254 6.22089 57.5 6.63582C63.5 6.63582 64.8445 6 70 6C74.1603 6 78.8433 5.83034 83 6C84.9712 6.08046 91.5 6 95.5 6C101.5 6 106 5.5 110.5 6C113.5 6 118.071 5.53266 122 6C126 6 129.5 6.5 132.5 6.5C134.5 6.5 136.998 7.07121 140.95 7C144 17 146.296 31.9538 151 41.5C153.915 47.4166 155.741 52.7972 159 58.5C159.95 60.1621 162.636 64.7716 163.5 66.5C164.652 68.8032 166.327 71.2118 167.5 73.5C168.697 75.8345 170.244 75.3918 171.819 77.5394C172.722 78.7709 175.5 81.5 176.346 82.1772C177.998 83.5 178.144 85.0364 179.5 83.5C183.177 79.3332 182 75 181.5 72.5C180.074 69.5 177.772 72 176.346 68C174.272 67 170.011 59.5 168.666 57C166.666 52.5 161.834 43.5 160.5 41.5C158.476 40.2721 155.319 26.9046 154 25C153.321 23.2093 151.5 18 149.5 10C148.75 7 149.336 4.16397 148.296 2.5C147.5 2 142.593 2 140.5 2C136.613 2 127.864 0.570664 124 0.999997C110 0.500003 95.5 2.41995e-05 80 1.00004C74.7651 1.00004 31.876 0.64224 31.4963 3.96442C31.2517 6.10461 31.0882 8.52417 31.0882 10.5687C31.0882 12.8921 30.0924 16.1133 29.233 18.3232C27.7513 22.1333 27.6596 25.9879 26.6729 29.8251C24.8401 36.9529 23.2253 44.2317 21.5898 51.4746C19.5 56 17.7816 59.0117 14.9855 61.8078Z" stroke="black" stroke-width="0.3" stroke-linecap="round"/>
+            </svg>
+               
+            
+    
+    
+        <div id="movableText" contenteditable="true" width="5px">Drag me!</div>
+
+        <div id="controlPanel">
+            <label>Draggable text:</label><br>
+            <label for="fontSelect">Font:</label>
+            <select id="fontSelect">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <!-- Add more font options as needed -->
+            </select>
+            <input type="color" id="colorPicker">
+        </div>
+
+        
+    </svg>
+    </div>
+    <button id="downloadPNG" class="downloadPNG" style="margin-top: 20px; margin-bottom: 25px; background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%); border-radius: 8px; border-style: none; box-sizing: border-box; color: #FFFFFF; cursor: pointer; flex-shrink: 0; font-family: 'Inter UI','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif; font-size: 16px; font-weight: 500; height: 4rem; padding: 0 1.6rem; text-align: center; text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px; transition: all .5s; user-select: none; -webkit-user-select: none; touch-action: manipulation;">
+        Download as PNG
+    </button>
+
+    <form action="../php/upload.php" method="post" enctype="multipart/form-data" style="padding-top: 50px; margin-bottom: 50px;">
+        Select image to upload:
+        <input type="file" name="file" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+        
+    </form>
+
+    
+
+    
+
+</main>
+    <script src="../js/avatar-generator.js"></script>
+    <script>
+        function downloadSVGAsPNG(e){
+            const canvas = document.createElement("canvas");
+            const svg = document.querySelector('#avatar2');
+            const base64doc = btoa(unescape(encodeURIComponent(svg.outerHTML)));
+            const w = parseInt(svg.getAttribute('width'));
+            const h = parseInt(svg.getAttribute('height'));
+            const img_to_download = document.createElement('img');
+            img_to_download.src = 'data:image/svg+xml;base64,' + base64doc;
+            console.log(w, h);
+            img_to_download.onload = function () {
+                console.log('img loaded');
+                canvas.setAttribute('width', w);
+                canvas.setAttribute('height', h);
+                const context = canvas.getContext("2d");
+                //context.clearRect(0, 0, w, h);
+                context.drawImage(img_to_download,0,0,w,h);
+                const dataURL = canvas.toDataURL('image/png');
+                if (window.navigator.msSaveBlob) {
+                window.navigator.msSaveBlob(canvas.msToBlob(), "download.png");
+                e.preventDefault();
+                } else {
+                const a = document.createElement('a');
+                const my_evt = new MouseEvent('click');
+                a.download = 'download.png';
+                a.href = dataURL;
+                a.dispatchEvent(my_evt);
+                }
+                //canvas.parentNode.removeChild(canvas);
+            }  
+        }
+        const downloadPNG = document.querySelector('#downloadPNG');
+        downloadPNG.addEventListener('click', downloadSVGAsPNG);        
+        document.getElementById('capture-button').addEventListener('click', function() {
+            const elementToCapture = document.getElementById('capture-div');
+
+            html2canvas(elementToCapture).then(function(canvas) {
+                const imageDataURL = canvas.toDataURL('image/png');
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = imageDataURL;
+                downloadLink.download = 'capture.png';
+                downloadLink.click();
+            });
+        });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script>
+        $(document).on('click', '.options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            $("#sleeve g").hide();
+            $("#sleeve #s_" + sleeveType).css("display",'block');
+        });
+        $(document).on('click', '.hoodie-options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            if(sleeveType == "no_hoodie") {
+                $('#hood').css("display", "none");
+                $('#threads').css("display", "none");
+            } else {
+                $('#hood').css("display", "block");
+                $('#threads').css("display", "block");
+            }
+            
+        });
+        $(document).on('click', '.pocket-options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            if(sleeveType == "no_pocket") {
+                $('#hoodie_pocket').css("display", "none");
+            } else {
+                $('#hoodie_pocket').css("display", "block");
+            }
+            
+        });
+        $(document).on('click', '.chain-options-list .option', function() {
+            var sleeveType = $(this).attr("data-sleeve");
+            if(sleeveType == "no_chain") {
+                $("#chain2").css("display", "none");
+            }
+            else {
+                $("#chain2").css("display", "block");
+            }
+        });
+        
+        $(document).ready(function() {
+            function updateAvatar(category, color) {
+                var selectedCategory = category;
+                var selectedColor = color;
+                if(selectedCategory == "hood_base") {
+                    $('#hood_short').css("fill", selectedColor);
+                    $('#hood_long').css("fill", selectedColor);  
+                }  
+                $("#" + selectedCategory).css("fill", selectedColor);
+                
+            }
+            
+   
+            $('#select-color').on('input', function() {
+                var category = $('#select-field').val();
+                var color = $(this).val();
+                updateAvatar(category, color);
+            });
+            //<---------- Movable text drag ---------->
+            const movableText = document.getElementById('movableText');
+
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            movableText.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDrag);
+
+            function startDrag(event) {
+            isDragging = true;
+            offsetX = event.clientX - movableText.getBoundingClientRect().left;
+            offsetY = event.clientY - movableText.getBoundingClientRect().top;
+            }
+
+            function drag(event) {
+            if (!isDragging) return;
+            const newX = event.clientX - offsetX;
+            const newY = event.clientY - offsetY;
+            
+            movableText.style.left = newX + 'px';
+            movableText.style.top = newY + 'px';
+            }
+
+            function stopDrag() {
+            isDragging = false;
+            }
+
+            //<---------- Movable pocket drag ---------->
+            // $('#pocket').draggable({
+            //     drag: function(event, ui) {
+            //     var pocket = $('#pocket');
+            //     var viewBox = pocket.attr('viewBox').split(' ');
+            //     var newX = parseFloat(viewBox[0]) - ui.position.left;
+            //     var newY = parseFloat(viewBox[1]) - ui.position.top;
+            //     var newViewBox = newX + ' ' + newY + ' ' + viewBox[2] + ' ' + viewBox[3];
+            //     pocket.attr('viewBox', newViewBox);
+            //     }
+            // });
+            
+
+            var controlPanelVisible = false;
+            var controlPanelHovered = false;
+            var hideTimeout;
+
+            function showControlPanel() {
+                clearTimeout(hideTimeout);
+                $('#controlPanel').css('display', 'block');
+                controlPanelVisible = true;
+            }
+
+            function hideControlPanel() {
+                hideTimeout = setTimeout(function() {
+                if (!controlPanelHovered) {
+                    $('#controlPanel').css('display', 'none');
+                    controlPanelVisible = false;
+                }
+                }, 2000); // Adjust the delay here (in milliseconds)
+            }
+
+            $('#controlPanel').on('mouseover', function() {
+                controlPanelHovered = true;
+            });
+
+            $('#controlPanel').on('mouseleave', function() {
+                controlPanelHovered = false;
+                hideControlPanel();
+            });
+
+            $('#movableText').on('mouseover', function() {
+                showControlPanel();
+            });
+
+            $('#movableText').on('mouseleave', function() {
+                hideControlPanel();
+            });
+
+            $('#movableText').on('mousemove', function() {
+                if (controlPanelVisible) {
+                showControlPanel();
+                }
+            });
+
+            $('#movableText').on('focus', function() {
+                showControlPanel();
+            });
+
+            $('#movableText').on('blur', function() {
+                hideControlPanel();
+            });
+
+            $('#fontSelect').on('change', function() {
+                $('#movableText').css('font-family', $(this).val());
+            });
+
+            $('#colorPicker').on('input', function() {
+                $('#movableText').css('color', $(this).val());
+            });
+
+            $('#container').on('mousemove', function(event) {
+                var mouseX = event.pageX;
+                var mouseY = event.pageY;
+                $('#controlPanel').css({ top: mouseY, left: mouseX + 30 }); // Adjust the offset as needed
+            });
+            // $('#movablePocket').draggable({
+            //     drag: function(event, ui) {
+            //     var pocket = $('#pocket');
+            //     var viewBox = pocket.attr('viewBox').split(' ');
+            //     var newX = parseFloat(viewBox[0]) - ui.position.left;
+            //     var newY = parseFloat(viewBox[1]) - ui.position.top;
+            //     var newViewBox = newX + ' ' + newY + ' ' + viewBox[2] + ' ' + viewBox[3];
+            //     pocket.attr('viewBox', newViewBox);
+            //     }
+            // });
+            
+            
+
+        });
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+        
+    </script>
+</body>
+</html>
