@@ -11,7 +11,7 @@
         <button class="tablink active" onclick="openTab('sleeve1')">Sleeve</button>
         <button class="tablink" onclick="openTab('placket1')">Placket</button>
         <button class="tablink" onclick="openTab('collar1')">Collar</button>
-        
+        <button class="tablink" onclick="openTab('pocket1')">Pocket</button>
     </div>
     
     <div id="sleeve1" class="tabcontent" style="display:block;">
@@ -32,16 +32,34 @@
             </li>
         </ul>
     </div>
+
+    <div id="pocket1" class="tabcontent" >
+        <!-- Choices of sleeve -->
+        
+        <ul class="pocket-options-list">
+            <li class="option" data-sleeve="no_pocket"> 
+                No Pocket
+            </li>
+            
+            <li class="option" data-sleeve="pocket">
+                <img src="../assets/full_t_shirt.png" alt="Shirt Image" height="100">
+                <br> Pocket
+            </li>
+        </ul>
+    </div>
     
     <div id="placket1" class="tabcontent" > 
         <ul class="placket-options-list">
+            <li class="option" data-sleeve="no_placket"> 
+                No Placket
+            </li>
             <li class="option" data-sleeve="plain_placket"> 
-                <img src="../assets/plain_placket.png" alt="Shirt Image" height="100">
+                <img src="../assets/t_shirt_small_placket.png" alt="Shirt Image" height="100">
                 <br> Plain Placket
             </li>
     
             <li class="option" data-sleeve="box_placket">
-                <img src="../assets/box_placket.png" alt="Shirt Image" height="100">
+                <img src="../assets/t_shirt_long_placket.png" alt="Shirt Image" height="100">
                 <br> Box Placket
             </li>
         </ul>
@@ -49,6 +67,10 @@
     
     <div id="collar1" class="tabcontent">
         <ul class="collar-options-list">
+            <li class="option" data-sleeve="no_collar"> 
+                
+                No collar
+            </li>
             <li class="option" data-sleeve="regular_collar"> 
                 <img src="../assets/collar_classic.png" alt="Collar Image" height="50"><br>
                 Regular Classic
@@ -114,17 +136,54 @@
     
         <!-- <img src="Isolated_white_t-shirt_front.jpg" alt="Example Image" width="550" > -->
     
-        <svg id = "placket" width="360" height="360" viewBox="-114 -24 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.1181 65.4711C20.002 30.2022 5.18659 10.3327 3 8.38905C4.84765 7.77317 7.28287 4.90412 9.53426 4.90412C19 8.53426 22.1332 16.1278 23.3288 16.811C23.3793 17.7192 23.68 19.7549 23.2643 20.5863C22.6927 21.7296 22.151 22.9096 21.8606 24.2165C21.2724 26.8636 19.8439 28.8539 19.8439 31.622V35.6877C19.8439 36.2885 19.867 36.8945 19.8439 37.4947C19.8198 38.1215 19.263 38.483 19.263 39.0275V48.0141C19.263 49.7646 19.5535 55.0082 19.5535 53.2576V49.9179C19.5535 47.362 19.8439 44.9988 19.8439 42.5285V39.8826C19.8439 38.7393 20.4247 37.8095 20.4247 36.7042C20.4247 35.7791 20.4064 32.8733 20.941 32.1383C21.2069 31.7726 20.997 30.6351 21.0055 30.2022C21.0311 28.8998 21.5863 27.7527 21.5863 26.4591C21.5863 24.8941 22.3227 23.9948 22.7157 22.6192C23.4128 20.1793 24.9298 18.1693 26.1684 15.9398C26.6184 15.1297 27.4618 13.7345 28.2658 13.2615C29.622 12.4637 30.2437 10.7674 31.3313 9.67977C33.5229 7.48816 36.1078 5.85545 38.7206 4.25876C39.6446 3.69411 42.3994 1.5 43.5 1.5C44.5336 1.5 45.219 2.71904 46 3.5C46.4475 3.94754 47.5 5 47.5 5.5C48.1936 5.58671 46.8932 7.16878 46.8521 7.51782C46.8096 7.8795 28.6634 19.2795 31.7346 65.4388C32 66 20.3139 66.156 20.1181 65.4711Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
-            <path d="M26.2331 33.3644C26.2331 35.2839 28.1177 35.5286 27.669 33.5096C27.5819 33.1178 26.1238 32.3674 25.9588 32.9449C25.6405 34.0589 26.4728 34.2869 27.3947 34.2357C28.9668 34.1483 28.4085 31.353 26.3944 31.9285C26.1007 32.0124 26.1713 33.5112 26.2492 33.7839C26.4025 34.3205 28.1419 34.2357 28.5564 34.2357" stroke="black" stroke-width="3" stroke-linecap="round"/>
-            <path d="M25.0714 51.6603C25.0714 53.0628 24.5785 54.274 26.233 54.274C27.0042 54.274 27.3947 54.4266 27.3947 53.548C27.3947 52.9321 27.6499 52.0632 26.9429 51.9346C24.9116 51.5653 25.0714 51.8778 25.0714 53.8384C25.0714 54.4989 26.0245 54.3034 26.5234 54.274C27.2121 54.2335 27.1043 52.9908 27.1043 52.5316" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        
+
+        <svg id="placket2" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id= "s_plain_placket" >
+
+                <svg id = "plain_placket" width="360" height="360" viewBox="-114 -22 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.1181 65.4711C20.002 30.2022 5.18659 10.3327 3 8.38905C4.84765 7.77317 7.28287 4.90412 9.53426 4.90412C19 8.53426 22.1332 16.1278 23.3288 16.811C23.3793 17.7192 23.68 19.7549 23.2643 20.5863C22.6927 21.7296 22.151 22.9096 21.8606 24.2165C21.2724 26.8636 19.8439 28.8539 19.8439 31.622V35.6877C19.8439 36.2885 19.867 36.8945 19.8439 37.4947C19.8198 38.1215 19.263 38.483 19.263 39.0275V48.0141C19.263 49.7646 19.5535 55.0082 19.5535 53.2576V49.9179C19.5535 47.362 19.8439 44.9988 19.8439 42.5285V39.8826C19.8439 38.7393 20.4247 37.8095 20.4247 36.7042C20.4247 35.7791 20.4064 32.8733 20.941 32.1383C21.2069 31.7726 20.997 30.6351 21.0055 30.2022C21.0311 28.8998 21.5863 27.7527 21.5863 26.4591C21.5863 24.8941 22.3227 23.9948 22.7157 22.6192C23.4128 20.1793 24.9298 18.1693 26.1684 15.9398C26.6184 15.1297 27.4618 13.7345 28.2658 13.2615C29.622 12.4637 30.2437 10.7674 31.3313 9.67977C33.5229 7.48816 36.1078 5.85545 38.7206 4.25876C39.6446 3.69411 42.3994 1.5 43.5 1.5C44.5336 1.5 45.219 2.71904 46 3.5C46.4475 3.94754 47.5 5 47.5 5.5C48.1936 5.58671 46.8932 7.16878 46.8521 7.51782C46.8096 7.8795 28.6634 19.2795 31.7346 65.4388C32 66 20.3139 66.156 20.1181 65.4711Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                    <path d="M26.2331 33.3644C26.2331 35.2839 28.1177 35.5286 27.669 33.5096C27.5819 33.1178 26.1238 32.3674 25.9588 32.9449C25.6405 34.0589 26.4728 34.2869 27.3947 34.2357C28.9668 34.1483 28.4085 31.353 26.3944 31.9285C26.1007 32.0124 26.1713 33.5112 26.2492 33.7839C26.4025 34.3205 28.1419 34.2357 28.5564 34.2357" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M25.0714 51.6603C25.0714 53.0628 24.5785 54.274 26.233 54.274C27.0042 54.274 27.3947 54.4266 27.3947 53.548C27.3947 52.9321 27.6499 52.0632 26.9429 51.9346C24.9116 51.5653 25.0714 51.8778 25.0714 53.8384C25.0714 54.4989 26.0245 54.3034 26.5234 54.274C27.2121 54.2335 27.1043 52.9908 27.1043 52.5316" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </g>
+            
+            <g id = "s_box_placket" style="display:none">
+                
+                <svg id = "box_placket" width="360" height="360" viewBox="-114 -22 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.1181 65.9711C20.002 30.7022 5.18659 10.8327 3 8.88905C4.84765 8.27317 7.28287 5.40412 9.53426 5.40412C19 9.03426 22.1332 16.6278 23.3288 17.311C23.3793 18.2192 23.68 20.2549 23.2643 21.0863C22.6927 22.2296 22.151 23.4096 21.8606 24.7165C21.2724 27.3636 19.8439 29.3539 19.8439 32.122V36.1877C19.8439 36.7885 19.867 37.3945 19.8439 37.9947C19.8198 38.6215 19.263 38.983 19.263 39.5275V48.5141C19.263 50.2646 19.5535 55.5082 19.5535 53.7576V50.4179C19.5535 47.862 19.8439 45.4988 19.8439 43.0285V40.3826C19.8439 39.2393 20.4247 38.3095 20.4247 37.2042C20.4247 36.2791 20.4064 33.3733 20.941 32.6383C21.2069 32.2726 20.997 31.1351 21.0055 30.7022C21.0311 29.3998 21.5863 28.2527 21.5863 26.9591C21.5863 25.3941 22.3227 24.4948 22.7157 23.1192C23.4128 20.6793 24.9298 18.6693 26.1684 16.4398C26.6184 15.6297 27.4618 14.2345 28.2658 13.7615C29.622 12.9637 30.2437 11.2674 31.3313 10.1798C33.5229 7.98816 36.1078 6.35545 38.7206 4.75876C39.6446 4.19411 42.3994 2 43.5 2C44.5336 2 48.219 6.71904 49 7.5C49.4475 7.94754 33 19.5 32 53.7576C29.3313 70.2576 33.5 108.5 33.5 119.5C33.5 123.036 28.2658 121 21.5863 121C20.1181 96.5 20.3139 66.656 20.1181 65.9711Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                    <path d="M26.2331 33.8644C26.2331 35.7839 28.1177 36.0286 27.669 34.0096C27.5819 33.6178 26.1238 32.8674 25.9588 33.4449C25.6405 34.5589 26.4728 34.7869 27.3947 34.7357C28.9668 34.6483 28.4085 31.853 26.3944 32.4285C26.1007 32.5124 26.1713 34.0112 26.2492 34.2839C26.4025 34.8205 28.1419 34.7357 28.5564 34.7357" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M25.0714 52.1603C25.0714 53.5628 24.5785 54.774 26.233 54.774C27.0042 54.774 27.3947 54.9266 27.3947 54.048C27.3947 53.4321 27.6499 52.5632 26.9429 52.4346C24.9116 52.0653 25.0714 52.3778 25.0714 54.3384C25.0714 54.9989 26.0245 54.8034 26.5234 54.774C27.2121 54.7335 27.1043 53.4908 27.1043 53.0316" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>                      
+    
+            </g>
         </svg>
 
-        <svg id = "collar" width="360" height="360" viewBox="-94 0 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg id = "collar" width="360" height="360" viewBox="-94 0 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M73 17.5C74.5 10.5 73.5 8.64943 73.5 5C81.5 11.5 82 15.4714 89 20.5C88 31.4714 82.8189 40.4999 81.5 40.4999C80.2619 40.4999 66 26.6736 66 25.4355C66 24.6605 71.5 22.5286 73 17.5Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
             <path d="M2.05353 21.5C3.61989 19.5 12.7189 8.5 15.5535 5C15.5535 17.5 19.4661 23.2062 28.0537 27.5C26.9343 28.5074 12.5642 40.5 11.0538 40.5C4.55399 35.8643 1.55372 32.5 2.05353 21.5Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
         </svg>
+        
+        <svg width="93" height="49" viewBox="0 0 93 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M66.9061 21.056C71.3213 14.3517 73.3902 2.75411 73.5195 3.23714C82.5154 11.6971 80.325 11.2487 86.8717 18.2944C85.0185 30.6967 85.5 38.5 76.4939 43.316C70 46 67.3131 47.2819 52.9997 32.5C53.8363 31.7582 63.5947 26.0844 66.9061 21.056Z" stroke="black" stroke-width="0.5" stroke-linecap="round"/>
+            <path d="M4.4612 19.2878C6.3804 17.6234 13.3752 5.7395 16.8256 2.84467C15.9131 15.4015 29.1765 25.3207 36.7871 31.1742C31.2555 41.2874 26.942 46.6178 19.5 45C8 42.5 6.98727 32.4952 4.4612 19.2878Z" stroke="black" stroke-width="0.5" stroke-linecap="round"/>
+        </svg> -->
 
+        <svg id="collar2" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id= "s_regular_collar" >
+                <svg id = "regular_collar" width="360" height="360" viewBox="-94 0 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M73 17.5C74.5 10.5 73.5 8.64943 73.5 5C81.5 11.5 82 15.4714 89 20.5C88 31.4714 82.8189 40.4999 81.5 40.4999C80.2619 40.4999 66 26.6736 66 25.4355C66 24.6605 71.5 22.5286 73 17.5Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                    <path d="M2.05353 21.5C3.61989 19.5 12.7189 8.5 15.5535 5C15.5535 17.5 19.4661 23.2062 28.0537 27.5C26.9343 28.5074 12.5642 40.5 11.0538 40.5C4.55399 35.8643 1.55372 32.5 2.05353 21.5Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                </svg>
+            </g>
+            <g id= "s_round_collar" style="display:none">
+                <svg id= "round_collar" width="360" height="360" viewBox="-94 0 360 360"  fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M66.9061 21.056C71.3213 14.3517 73.3902 2.75411 73.5195 3.23714C82.5154 11.6971 80.325 11.2487 86.8717 18.2944C85.0185 30.6967 85.5 38.5 76.4939 43.316C70 46 67.3131 47.2819 52.9997 32.5C53.8363 31.7582 63.5947 26.0844 66.9061 21.056Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                    <path d="M4.4612 19.2878C6.3804 17.6234 13.3752 5.7395 16.8256 2.84467C15.9131 15.4015 29.1765 25.3207 36.7871 31.1742C31.2555 41.2874 26.942 46.6178 19.5 45C8 42.5 6.98727 32.4952 4.4612 19.2878Z" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+                </svg>
+            </g>
+        </svg>
+    
         <!-- <div id = "movablePocket"> -->
         <svg id = "pocket" width="360" height="360" viewBox="-156 -85 360 360" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M3.26783 2.03774C16.7053 4.0378 36.2053 3.0378 44.7053 2.03776C45.2053 1.03764 48.7053 20.0377 45.2053 43.0377C26.4168 62.3855 5.20529 48.0377 3.57596 44.1899C0.705288 30.0377 2.63396 4.896 2.63396 2.51314" stroke="#211515" stroke-width="0.2" stroke-linecap="round"/>
@@ -282,6 +341,15 @@
                     $('#s_long1').css("fill", selectedColor);
                     $('#pocket').css("fill", selectedColor);
                 }
+                if(selectedCategory == "placket") {
+                    $('#plain_placket').css("fill", selectedColor);
+                    $('#box_placket').css("fill", selectedColor);
+                }
+                if(selectedCategory == "collar") {
+                    $('#regular_collar').css("fill", selectedColor);
+                    $('#round_collar').css("fill", selectedColor);
+                
+                }
                 $("#" + selectedCategory).css("fill", selectedColor);
             }
             
@@ -289,6 +357,32 @@
                 var sleeveType = $(this).attr("data-sleeve");
                 $("#sleeve g").hide();
                 $("#sleeve #s_" + sleeveType).show();
+            });
+            $(document).on('click', '.placket-options-list .option', function() {
+                var sleeveType = $(this).attr("data-sleeve");
+                
+                $("#placket2 g").hide();
+                if(sleeveType != "no_placket") {
+                
+                    $("#placket2 #s_" + sleeveType).css("display",'block');
+                }
+            });
+            $(document).on('click', '.pocket-options-list .option', function() {
+                var sleeveType = $(this).attr("data-sleeve");
+                
+                $("#pocket").hide();
+                if(sleeveType != "no_pocket") {
+                
+                    $("#pocket").css("display",'block');
+                }
+            });
+            $(document).on('click', '.collar-options-list .option', function() {
+                var sleeveType = $(this).attr("data-sleeve");
+                $("#collar2 g").hide();
+                if(sleeveType != "no_collar") {
+                $("#collar2 #s_" + sleeveType).css("display",'block');
+                }
+                
             });
             
             $('#select-color').on('input', function() {
@@ -412,7 +506,19 @@
             //     }
             // });
         });
-
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
         
         
     </script>
